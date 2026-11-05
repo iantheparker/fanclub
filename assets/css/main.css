@@ -350,6 +350,19 @@ a.subtitle2:hover {
   font-weight: normal;
 }
 
+.project-tile .tile-date {
+  margin-top: 0.2rem;
+}
+
+.nav-date {
+  margin: 0;
+  padding: 0 1rem 0.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.5;
+  font-weight: normal;
+}
+
 @media (min-width: 1024px) {
   .project-tile {
     width: 50%;

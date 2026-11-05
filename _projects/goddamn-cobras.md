@@ -4,7 +4,7 @@ title: Goddamn Cobras
 permalink: /goddamn-cobras/
 playful: true
 date_label: "May, 2009"
-order: 15
+order: 16
 tags: [Founder, Producer, Director]
 ---
 
