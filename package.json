@@ -1,0 +1,17 @@
+{
+  "name": "fanclub",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "liquidjs": "^10.30.1",
+    "marked": "^18.1.3",
+    "marked-smartypants": "^1.1.12",
+    "vite": "^8.3.6",
+    "yaml": "^2.9.1"
+  }
+}

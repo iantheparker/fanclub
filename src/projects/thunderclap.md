@@ -43,8 +43,8 @@ angry response questioning whether or not their blast went out at all, like the 
 </div>
 
 <div class="quote-block">
-  "please refund, the campaign did not work. :("<br><br>
-  "how do I know it's working?"
+<p>"please refund, the campaign did not work. :("<br><br>
+  "how do I know it's working?"</p>
 </div>
 
 <div class="text-block" markdown="1">

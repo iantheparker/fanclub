@@ -3,16 +3,16 @@
 # Add the "hold" label to any Dependabot PR to stop it from auto-merging.
 version: 2
 updates:
-  - package-ecosystem: bundler
+  - package-ecosystem: npm
     directories: ["/"]
     schedule:
       interval: monthly
-    labels: [dependencies, ruby]
+    labels: [dependencies, javascript]
     groups:
-      gems:
+      npm:
         applies-to: version-updates
         patterns: ["*"]
-      gems-security:
+      npm-security:
         applies-to: security-updates
         patterns: ["*"]
 

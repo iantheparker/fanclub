@@ -35,8 +35,8 @@ Learning More with Less by <a href="https://twitter.com/DataLives?ref_src=twsrc%
 Great to see folks doing additional ablation experiments beyond those we already did in the
 ULMFiT paper. This work shows that even just a little unlabeled data helps a lot!
 </p>
-&mdash; Jeremy Howard (@jeremyphoward)
-<a href="https://twitter.com/jeremyphoward/status/1072254173310152706?ref_src=twsrc%5Etfw">December 10, 2018</a>
+<p>&mdash; Jeremy Howard (@jeremyphoward)
+<a href="https://twitter.com/jeremyphoward/status/1072254173310152706?ref_src=twsrc%5Etfw">December 10, 2018</a></p>
 </blockquote>
 </div>
 
