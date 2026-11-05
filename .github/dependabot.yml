@@ -1,0 +1,30 @@
+# Dependabot: one batched PR per ecosystem per directory, once a month.
+# PRs that pass the Build workflow are auto-merged (see workflows/build.yml).
+# Add the "hold" label to any Dependabot PR to stop it from auto-merging.
+version: 2
+updates:
+  - package-ecosystem: bundler
+    directories: ["/"]
+    schedule:
+      interval: monthly
+    labels: [dependencies, ruby]
+    groups:
+      gems:
+        applies-to: version-updates
+        patterns: ["*"]
+      gems-security:
+        applies-to: security-updates
+        patterns: ["*"]
+
+  - package-ecosystem: github-actions
+    directories: ["/"]
+    schedule:
+      interval: monthly
+    labels: [dependencies, github-actions]
+    groups:
+      actions:
+        applies-to: version-updates
+        patterns: ["*"]
+      actions-security:
+        applies-to: security-updates
+        patterns: ["*"]
