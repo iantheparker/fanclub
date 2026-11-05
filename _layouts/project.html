@@ -3,7 +3,7 @@ layout: default
 ---
 <nav class="navbar{% if page.playful %} playful{% endif %}">
   <div class="left"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/assets/img/back.svg" alt="Back to home"></a></div>
-  <div class="center"><h2>{{ page.title }}</h2></div>
+  <div class="center"><h2>{{ page.title }}</h2>{% if page.date_label %}<p class="nav-date">{{ page.date_label }}</p>{% endif %}</div>
   <div class="right"></div>
 </nav>
 

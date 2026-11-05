@@ -12,6 +12,7 @@ layout: default
     <a class="subtitle" href="https://iantheparker.tumblr.com" title="Tumblr"><i class="fab fa-tumblr"></i></a>
     <a class="subtitle" href="https://github.com/iantheparker" title="GitHub"><i class="fab fa-github"></i></a>
     <a class="subtitle" href="https://twitter.com/iantheparker" title="Twitter"><i class="fab fa-twitter"></i></a>
+    <a class="subtitle" href="https://linkedin.com/in/iantheparker" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
     <a class="subtitle" href="mailto:iantheparker@gmail.com?Subject=I%20want%20to%20join%20your%20fan%20club" title="Email"><i class="far fa-envelope"></i></a>
   </p>
 </div>
@@ -22,7 +23,8 @@ layout: default
   <a class="project-tile {% if project.playful %}pink{% else %}blue{% endif %}" href="{{ site.baseurl }}{{ project.url }}">
     <p>
       {{ project.title }}
-      <span class="tile-meta">{{ project.date_label }}{% if project.tags.size > 0 %} · {{ project.tags | join: " · " }}{% endif %}{% if project.medium.size > 0 %} · {{ project.medium | join: " · " }}{% endif %}</span>
+      <span class="tile-meta">{% if project.tags.size > 0 %}{{ project.tags | join: " · " }}{% endif %}{% if project.medium.size > 0 %} · {{ project.medium | join: " · " }}{% endif %}</span>
+      {% if project.date_label %}<span class="tile-meta tile-date">{{ project.date_label }}</span>{% endif %}
     </p>
   </a>
   {% endfor %}

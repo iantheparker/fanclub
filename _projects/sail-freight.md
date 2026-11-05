@@ -3,7 +3,7 @@ layout: project
 title: Sail Freight
 permalink: /sail-freight/
 date_label: "January, 2014"
-order: 6
+order: 7
 tags: [Co-Producer]
 ---
 
