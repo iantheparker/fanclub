@@ -9,15 +9,10 @@ collections:
     permalink: /:name/
 
 exclude:
-  - src/
-  - node_modules/
-  - package.json
-  - yarn.lock
-  - static.config.js
-  - .babelrc
-  - .eslintrc.js
   - Gemfile
   - Gemfile.lock
+  - README.md
+  - vendor/
 
 markdown: kramdown
 kramdown:
