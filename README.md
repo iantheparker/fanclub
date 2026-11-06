@@ -29,6 +29,6 @@ To add a project, copy an existing file in `src/projects/` and edit it.
 ## Dependency updates
 
 - Dependabot opens one grouped PR per ecosystem (npm, GitHub Actions) once a month. Security fixes come in their own grouped PR. See `.github/dependabot.yml`.
-- The **Build** workflow runs `npm run build` on every PR and deploys `main` to GitHub Pages. Dependabot PRs that pass are squash-merged and the site is redeployed automatically.
+- The **Build** workflow runs `npm run build` on every PR and deploys `main` to GitHub Pages. Minor and patch Dependabot PRs that pass are squash-merged and the site is redeployed automatically. Major version bumps come as their own PRs and wait for you.
 - Add the `hold` label to a Dependabot PR to stop it from auto-merging.
 - To see what's been updated, open the PRs labeled `dependencies` ([open](https://github.com/iantheparker/fanclub/pulls?q=label%3Adependencies) / [merged](https://github.com/iantheparker/fanclub/pulls?q=label%3Adependencies+is%3Amerged)).
