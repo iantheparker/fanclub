@@ -25,11 +25,9 @@ and a brand new analytics dashboard.
 </p>
 </div>
 
-{% include youtube.html id="n20fcGjeAKM" %}
-
 <div class="text-block" markdown="1">
 
-Thunderclap allows anyone to create a campaign that blasts social media messages from many
+[Thunderclap](https://en.wikipedia.org/wiki/Thunderclap_(website)) allows anyone to create a campaign that blasts social media messages from many
 users' accounts all at once. We call each blast a "Thunderclap campaign". Each Thunderclap
 campaign is designed to rally people to the campaign organizer's target landing page at a
 crucial time. Every week, hundreds of new campaigns are created and hundreds of thousands of
