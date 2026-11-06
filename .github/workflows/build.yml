@@ -43,9 +43,9 @@ jobs:
       - id: deployment
         uses: actions/deploy-pages@v5
 
-  # Squash-merge Dependabot PRs once the site builds, then redeploy main.
-  # (Merges made with GITHUB_TOKEN don't trigger push workflows, hence the dispatch.)
-  # Label a PR "hold" to skip.
+  # Squash-merge minor/patch Dependabot PRs once the site builds, then redeploy
+  # main. (Merges made with GITHUB_TOKEN don't trigger push workflows, hence the
+  # dispatch.) Major bumps are left for review. Label a PR "hold" to skip.
   automerge:
     needs: build
     if: >-
@@ -59,7 +59,10 @@ jobs:
       pull-requests: write
       actions: write
     steps:
-      - run: |
+      - id: meta
+        uses: dependabot/fetch-metadata@v3
+      - if: steps.meta.outputs.update-type != 'version-update:semver-major'
+        run: |
           gh pr merge "$PR_URL" --squash --delete-branch
           gh workflow run build.yml --ref main -R "$GITHUB_REPOSITORY"
         env:

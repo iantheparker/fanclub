@@ -1,5 +1,6 @@
 # Dependabot: one batched PR per ecosystem per directory, once a month.
-# PRs that pass the Build workflow are auto-merged (see workflows/build.yml).
+# Minor/patch PRs that pass the Build workflow are auto-merged (see workflows/build.yml).
+# Major version bumps arrive as their own PRs and wait for a human.
 # Add the "hold" label to any Dependabot PR to stop it from auto-merging.
 version: 2
 updates:
@@ -12,6 +13,7 @@ updates:
       npm:
         applies-to: version-updates
         patterns: ["*"]
+        update-types: [minor, patch]
       npm-security:
         applies-to: security-updates
         patterns: ["*"]
@@ -25,6 +27,7 @@ updates:
       actions:
         applies-to: version-updates
         patterns: ["*"]
+        update-types: [minor, patch]
       actions-security:
         applies-to: security-updates
         patterns: ["*"]
