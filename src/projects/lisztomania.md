@@ -97,8 +97,8 @@ recreating the Breakfast Club dance began circulating online, Parker Higgins
 (<a href="https://twitter.com/xor?ref_src=twsrc%5Etfw">@xor</a>) explained how it came to be.
 <a href="https://t.co/ZY1SbnIv8K">https://t.co/ZY1SbnIv8K</a>
 </p>
-&mdash; Twitter Moments (@TwitterMoments)
-<a href="https://twitter.com/TwitterMoments/status/1080993777857093632?ref_src=twsrc%5Etfw">January 4, 2019</a>
+<p>&mdash; Twitter Moments (@TwitterMoments)
+<a href="https://twitter.com/TwitterMoments/status/1080993777857093632?ref_src=twsrc%5Etfw">January 4, 2019</a></p>
 </blockquote>
 </div>
 

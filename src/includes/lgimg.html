@@ -1,4 +1,4 @@
 <div class="lg-img{% if include.big %} big{% endif %}{% if include.double %} double{% endif %}">
-  <img src="{{ include.src }}" alt="{{ include.alt | default: '' }}">
+  <p><img src="{{ include.src }}" alt="{{ include.alt | default: '' }}"></p>
   {% if include.caption %}<p class="caption">{{ include.caption }}</p>{% endif %}
 </div>
