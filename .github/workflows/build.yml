@@ -61,7 +61,10 @@ jobs:
     steps:
       - id: meta
         uses: dependabot/fetch-metadata@v3
-      - if: steps.meta.outputs.update-type != 'version-update:semver-major'
+      # Allowlist, so an empty update-type (e.g. a human pushed to the branch) fails closed.
+      - if: >-
+          steps.meta.outputs.update-type == 'version-update:semver-minor' ||
+          steps.meta.outputs.update-type == 'version-update:semver-patch'
         run: |
           gh pr merge "$PR_URL" --squash --delete-branch
           gh workflow run build.yml --ref main -R "$GITHUB_REPOSITORY"

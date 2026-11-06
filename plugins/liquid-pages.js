@@ -48,14 +48,19 @@ export default function liquidPages({ site }) {
       const doc = readDoc(path.join(dir('pages'), file))
       const name = path.basename(file, '.html')
       const url = normalizeUrl(doc.data.permalink ?? (name === 'index' ? '/' : name))
-      pages.push({ ...doc, url, markdown: false })
+      pages.push({ ...doc, url, file: `pages/${file}`, markdown: false })
     }
     for (const file of fs.readdirSync(dir('projects')).filter((f) => f.endsWith('.md'))) {
       const doc = readDoc(path.join(dir('projects'), file))
       const url = normalizeUrl(doc.data.permalink ?? path.basename(file, '.md'))
-      pages.push({ ...doc, url, markdown: true, collection: 'projects' })
+      pages.push({ ...doc, url, file: `projects/${file}`, markdown: true, collection: 'projects' })
     }
-    for (const page of pages) page.id = path.join(root, outputPath(page.url))
+    const seen = new Map()
+    for (const page of pages) {
+      if (seen.has(page.url)) throw new Error(`Duplicate permalink ${page.url}: ${seen.get(page.url)} and ${page.file}`)
+      seen.set(page.url, page.file)
+      page.id = normalizePath(path.join(root, outputPath(page.url)))
+    }
     return pages
   }
 
@@ -88,7 +93,7 @@ export default function liquidPages({ site }) {
     },
 
     config(config) {
-      root = path.resolve(config.root ?? process.cwd())
+      root = normalizePath(path.resolve(config.root ?? process.cwd()))
       const input = Object.fromEntries(loadPages().map((p) => [outputPath(p.url), p.id]))
       return { build: { rollupOptions: { input } } }
     },
